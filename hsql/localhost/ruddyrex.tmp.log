@@ -1,0 +1,27 @@
+/*C5*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C8*/SET SCHEMA PUBLIC
+drop schema public cascade
+drop table user if exists
+drop table follower if exists
+drop table post if exists
+DISCONNECT
+/*C9*/SET SCHEMA PUBLIC
+drop schema public cascade
+drop table user if exists
+drop table follower if exists
+drop table post if exists
+DISCONNECT
+/*C10*/SET SCHEMA PUBLIC
+drop schema public cascade
+drop table user if exists
+drop table follower if exists
+drop table post if exists
+DISCONNECT
+/*C11*/SET SCHEMA PUBLIC
+drop schema public cascade
+drop table user if exists
+create table user (\u000aid int primary key,\u000aname varchar(20), \u000aemail varchar(20),\u000acreated_at timestamp,\u000apassword varchar(20) \u000a)
+drop table follower if exists
+drop table post if exists
+DISCONNECT
