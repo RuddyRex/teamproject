@@ -1,0 +1,48 @@
+{
+	"folders": {},
+	"connections": {
+		"hsqldb_server-183ec677c34-22ce084644994dbf": {
+			"provider": "generic",
+			"driver": "hsqldb_server",
+			"name": "testdb",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "9001",
+				"database": "testdb",
+				"url": "jdbc:hsqldb:hsql://localhost:9001/testdb",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"hsqldb_server-183ec69c4e5-1fafbeeab67f9b4a": {
+			"provider": "generic",
+			"driver": "hsqldb_server",
+			"name": "testdb 2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "9001",
+				"database": "testdb",
+				"url": "jdbc:hsqldb:hsql://localhost:9001/testdb",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
