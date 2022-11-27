@@ -20,5 +20,32 @@ public class follower {
 	private String role;
 	@Column(name = "created_at")
 	private Timestamp Date;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAlias() {
+		return alias;
+	}
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
+	public Timestamp getDate() {
+		return Date;
+	}
+	public void setDate(Timestamp date) {
+		Date = date;
+	}
+	public int getId() {
+		return id;
+	}
 
 }

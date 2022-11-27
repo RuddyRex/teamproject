@@ -18,5 +18,26 @@ public class post {
 		private String content;
 		@Column(name = "created_at")
 		private Timestamp Date;
+		public String getTitle() {
+			return title;
+		}
+		public void setTitle(String title) {
+			this.title = title;
+		}
+		public String getContent() {
+			return content;
+		}
+		public void setContent(String content) {
+			this.content = content;
+		}
+		public Timestamp getDate() {
+			return Date;
+		}
+		public void setDate(Timestamp date) {
+			Date = date;
+		}
+		public int getId() {
+			return id;
+		}
 
 }
