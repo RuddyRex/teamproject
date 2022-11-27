@@ -1,2 +1,2 @@
 
-select * from USERS;
+select * from user;
