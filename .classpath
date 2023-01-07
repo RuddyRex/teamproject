@@ -13,7 +13,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -25,7 +24,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/media/120GB/Excercise/teamproject/hsqldb-2.4.1.jar"/>
-	<classpathentry kind="lib" path="lib/intellij_forms_rt.jar" sourcepath="lib/intellij_forms_rt_src.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
