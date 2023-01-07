@@ -1,5 +1,2 @@
-com.ruddyrex.teamproject.Ruddyrex
-SQL_code.sql
-target/classes/Model
-target/classes/View
-target/dependency
+.project
+.dbeaver
