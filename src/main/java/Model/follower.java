@@ -10,42 +10,35 @@ import javax.persistence.Table;
 @Table (name = "follower")
 
 public class follower {
+	
 	@Column(name = "id")
 	private int id;
-	@Column(name = "name")
-	private String name;
-	@Column(name = "alias")
-	private String alias;
-	@Column(name = "role")
-	private String role;
-	@Column(name = "created_at")
-	private Timestamp Date;
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getAlias() {
-		return alias;
-	}
-	public void setAlias(String alias) {
-		this.alias = alias;
-	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
-	public Timestamp getDate() {
-		return Date;
-	}
-	public void setDate(Timestamp date) {
-		Date = date;
-	}
+	@Column(name = "follower_id")
+	private String follower_id;
+	@Column(name = "followed_id")
+	private String followed_id;
+	
 	public int getId() {
 		return id;
 	}
-
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getFollower_id() {
+		return follower_id;
+	}
+	public void setFollower_id(String follower_id) {
+		this.follower_id = follower_id;
+	}
+	public String getFollowed_id() {
+		return followed_id;
+	}
+	public void setFollowed_id(String followed_id) {
+		this.followed_id = followed_id;
+	}
+	
+	
+	
+	
+	
 }

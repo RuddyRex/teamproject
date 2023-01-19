@@ -12,17 +12,26 @@ import javax.persistence.Table;
 public class post {
 		@Column(name = "id")
 		private int id;
-		@Column(name = "title")
-		private String title;
+		@Column(name = "user_id")
+		private String user_id;
 		@Column(name = "content")
 		private String content;
-		@Column(name = "created_at")
+		@Column(name = "creation_date")
 		private Timestamp Date;
-		public String getTitle() {
-			return title;
+		@Column(name = "is_public")
+		private boolean is_public;
+		
+		public int getId() {
+			return id;
 		}
-		public void setTitle(String title) {
-			this.title = title;
+		public void setId(int id) {
+			this.id = id;
+		}
+		public String getUser_id() {
+			return user_id;
+		}
+		public void setUser_id(String user_id) {
+			this.user_id = user_id;
 		}
 		public String getContent() {
 			return content;
@@ -36,8 +45,13 @@ public class post {
 		public void setDate(Timestamp date) {
 			Date = date;
 		}
-		public int getId() {
-			return id;
+		public boolean isIs_public() {
+			return is_public;
 		}
+		public void setIs_public(boolean is_public) {
+			this.is_public = is_public;
+		}
+		
+		
 
 }
