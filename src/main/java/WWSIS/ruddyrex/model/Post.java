@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "posts")
+@Table(name = "post")
 public class Post {
 	@Id
 	@Column(name = "id", nullable = false)
