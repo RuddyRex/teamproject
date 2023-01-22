@@ -49,5 +49,5 @@
 	</bean>
 	<bean id="FollowerDAO" class="WWSIS.ruddyrex.FollowerDAOImpl" />
 	<bean id="UserDAO" class="WWSIS.ruddyrex.UserDAOImpl" />
-	<bean id="WpisDao" class="WWSIS.ruddyrex.PostDAOImpl" />
+	<bean id="PostDao" class="WWSIS.ruddyrex.PostDAOImpl" />
 </beans>
