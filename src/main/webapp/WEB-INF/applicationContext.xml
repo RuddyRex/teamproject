@@ -42,5 +42,6 @@
     <bean id="PostDao" class="pl.wwsis.microblog.dao.impl.PostDaoImpl"/></beanid>
     <bean id="UserDao" class="pl.wwsis.microblog.dao.impl.UserDaoImpl"/></beanid>
     <bean id="FollowerDao" class="pl.wwsis.microblog.dao.impl.FollowerDaoImpl"/></beanid>
+    <bean id="MicroblogService" class="pl.wwsis.microblog.service.impl.MicroblogServiceImpl"/></beanid>
 
 </beans>
