@@ -25,4 +25,17 @@ public class user {
 		@Column(name = "pass")
 		private String pass;
 
+		public void setFirstName(String firstName) {
+			// TODO Auto-generated method stub
+			this.firstName = firstName;
+		}
+		public void setLastName(String last_name) {
+			// TODO Auto-generated method stub
+			this.last_name = last_name;
+		}
+		public void setPassword(String pass) {
+			// TODO Auto-generated method stub
+			this.pass = pass;
+		}
+
 }
