@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
                         http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/contexthttp://www.springframework.org/schema/context/spring-context-4.0.xsd">
     <context:component-scan
-        base-package="pl.wwsis.microblog" />
+        base-package="com.ruddyrex.teamproject" />
 
     <context:annotation-config />
 
@@ -39,8 +39,5 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
     </bean>
-    <bean id="PostDao" class="pl.wwsis.microblog.dao.impl.PostDaoImpl"/></beanid>
-    <bean id="UserDao" class="pl.wwsis.microblog.dao.impl.UserDaoImpl"/></beanid>
-    <bean id="FollowerDao" class="pl.wwsis.microblog.dao.impl.FollowerDaoImpl"/></beanid>
 
 </beans>
