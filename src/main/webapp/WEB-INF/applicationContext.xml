@@ -39,5 +39,8 @@
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
     </bean>
+    <bean id="PostDao" class="pl.wwsis.microblog.dao.impl.PostDaoImpl"/></beanid>
+    <bean id="UserDao" class="pl.wwsis.microblog.dao.impl.UserDaoImpl"/></beanid>
+    <bean id="FollowerDao" class="pl.wwsis.microblog.dao.impl.FollowerDaoImpl"/></beanid>
 
 </beans>
