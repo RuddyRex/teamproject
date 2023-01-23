@@ -37,5 +37,11 @@ public class user {
 			// TODO Auto-generated method stub
 			this.pass = pass;
 		}
+		public Integer getId() {
+			return id;
+		}
+		public void setId(Integer id) {
+			this.id = id;
+		}
 
 }
