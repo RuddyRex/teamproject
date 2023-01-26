@@ -16,7 +16,7 @@ public class Followers {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id", nullable=false)
-	private Long id;
+	private Integer id;
 	
 	@OneToOne
 	@JoinColumn(name = "id")
@@ -28,11 +28,11 @@ public class Followers {
 	@Column(name = "followee_id")
 	private User followee;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

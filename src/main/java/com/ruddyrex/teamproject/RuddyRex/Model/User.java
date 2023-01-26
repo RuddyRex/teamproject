@@ -17,7 +17,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	
 	@Column(name="name", nullable=false)
 	private String name;
@@ -34,16 +34,15 @@ public class User {
 	@Column(name = "created_at", nullable=false)
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Date created_at;
-	
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -83,7 +82,5 @@ public class User {
 	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	
-	
 	
 }

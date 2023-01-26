@@ -20,12 +20,12 @@ public class Post {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 	
 	@ManyToOne
 	@JoinColumn(name = "id")
 	@Column(name="user_id", nullable=false)
-	private Long user_id;
+	private Integer user_id;
 	
 	@Column(name="title", nullable=false)
 	private String title;
@@ -37,20 +37,19 @@ public class Post {
 	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
 	private Date created_at;
 
-	
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public Long getUser_id() {
+	public Integer getUser_id() {
 		return user_id;
 	}
 
-	public void setUser_id(Long user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 
@@ -77,7 +76,5 @@ public class Post {
 	public void setCreated_at(Date created_at) {
 		this.created_at = created_at;
 	}
-	
-	
 	
 }

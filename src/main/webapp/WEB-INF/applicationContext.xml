@@ -4,8 +4,7 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvchttp://www.springframework.org/schema/mvc/spring-mvc-4.0.xsdhttp://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans-4.0.xsdhttp://www.springframework.org/schema/contexthttp://www.springframework.org/schema/context/spring-context-4.0.xsd"
-	xmlns:tx="http://www.springframework.org/schema/tx"
-	>
+	xmlns:tx="http://www.springframework.org/schema/tx">
 	<context:component-scan
 		base-package="com.ruddyrex.teamproject.RuddyRex" />
 
@@ -43,12 +42,22 @@
 	</bean>
 	<bean
 		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
-	<bean class ="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+	<bean
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
 	<bean id="transactionManager"
 		class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory"
 			ref="entityManagerFactoryBean" />
 	</bean>
 
+
+	<bean id="PostDao"
+		class="com.ruddyrex.teamproject.RuddyRex.dao.impl.PostDao" />
+	<bean id="UserDao"
+		class="com.ruddyrex.teamproject.RuddyRex.dao.impl.UserDaoImpl" />
+	<bean id="FollowerDao"
+		class="com.ruddyrex.teamproject.RuddyRex.dao.impl.FollowerDaoImpl" />
+	<bean id="MicroblogService"
+		class="package com.ruddyrex.teamproject.RuddyRex.service.impl.MicroblogServiceImpl" />
 
 </beans>
