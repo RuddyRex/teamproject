@@ -65,3 +65,4 @@ public class UserDaoTest {
 		user testUser = userDao.getUserLogin(1);
 		assertEquals(user,testUser);
 	}
+}
