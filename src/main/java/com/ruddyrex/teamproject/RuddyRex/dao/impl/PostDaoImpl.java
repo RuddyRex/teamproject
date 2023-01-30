@@ -49,7 +49,7 @@ public class PostDaoImpl implements PostDao{
 		Query query=entityManager.createQuery(hql);
 		query.setParameter("user_id", user_id);
 		query.setParameter("content", content);
-		query.executeUpdate();		
+		query.executeUpdate();	
 	}
     
 }
