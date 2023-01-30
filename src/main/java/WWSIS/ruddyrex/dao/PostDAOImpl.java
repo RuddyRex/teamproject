@@ -19,8 +19,8 @@ public class PostDAOImpl implements PostDAO {
     @Override
     public List<Post> getAllUsersPosts(int userID)
     {
-        Query query = entityManager.createQuery("SELECT * FROM post WHERE userID= :userid");
-        query.setParameter("userID", userID);
+        String hql="SELECT * FROM post WHERE user_id = "+userID;
+		Query query=entityManager.createQuery(hql);
         List<Post> posts = query.getResultList();
         return posts;
     }
@@ -28,16 +28,17 @@ public class PostDAOImpl implements PostDAO {
     @Override
     public List<Post> getAllUserAndFollowersPosts(int userID)
     {
-        Query query = entityManager.createQuery("SELECT content FROM post P, follower F WHERE P.userID=F.followerId OR P.userID=:userID");
+        String hql="SELECT content FROM post P, follower F WHERE P.user_id=F.follower_id OR P.user_id = "+userID;
+		Query query=entityManager.createQuery(hql);
         List<Post> posts = query.getResultList();
-        query.setParameter("userID", userID);
         return posts;
     }
 
     @Override
     public List<Post> getEveryPost()
     {
-        Query query = entityManager.createQuery("SELECT content FROM post");
+        String hql="SELECT content FROM post";
+		Query query=entityManager.createQuery(hql);
         List<Post> posts = query.getResultList();
         return posts;
     }
@@ -45,8 +46,8 @@ public class PostDAOImpl implements PostDAO {
     @Override
     public void createNewPost(int userID, String content)
     {
-        String hql = "INSERT INTO pst (:userID,:content)" + "SELECT userID,content";
-        Query query = entityManager.createQuery(hql);
+        String hql="INSERT INTO post(userID,content) VALUES(:userID, :content)";
+		Query query=entityManager.createQuery(hql);
         query.setParameter("userID", userID);
         query.setParameter("content", content);
         query.executeUpdate();

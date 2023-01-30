@@ -1,11 +1,11 @@
 package WWSIS.ruddyrex.dao;
 
+import java.util.List;
+
 import WWSIS.ruddyrex.model.Follower;
 
 public interface FollowerDAO {
-    void add(int followedId, int followerId);
-
-    void remove(int followedId, int followerId);
-
-    Follower getByFollowedId(int followedId);
+    public void addFollower(int followerId, int followedId);
+	public void unFollow(int followerId, int unfollowedId);
+	public List<Follower> checkingFollowerList(int followedId);
 }

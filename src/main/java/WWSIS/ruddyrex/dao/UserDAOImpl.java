@@ -13,43 +13,18 @@ import WWSIS.ruddyrex.model.User;
 @Transactional
 public class UserDAOImpl implements UserDAO {
 
-	private static final String USERS_TABLE = "users";
-	private static final String USERS_TABLE_NICK_NAME_FIELD = "nick_name";
-
-	private static final String NICK_NAME_QUERY_PROPERTY = "nickName";
-
-	private static final int FIRST_LIST_INDEX = 0;
-
 	@PersistenceContext
 	EntityManager entityManager;
-
-	@SuppressWarnings("unchecked")
+	
 	@Override
-	public User getUserByLogin(String login) {
-		if (isLoginInvalid(login)) {
-			return null;
-		}
-		String qlString = "SELECT u FROM " + USERS_TABLE + " u WHERE LOWER(u." + USERS_TABLE_NICK_NAME_FIELD
-				+ ") = LOWER(:" + NICK_NAME_QUERY_PROPERTY + ")";
-		Query query = entityManager.createQuery(qlString);
-		query.setParameter(NICK_NAME_QUERY_PROPERTY, login);
-		List<User> users = query.getResultList();
-
-		if (notSingleUserFound(users)) {
-			return null;
-		}
-
-		return users.get(FIRST_LIST_INDEX);
+	public User getUserLogin (int id) {
+		String hql="SELECT * FROM user WHERE id = "+id;
+		Query query=entityManager.createQuery(hql);
+		@SuppressWarnings("unchecked")
+		List<User> results =query.getResultList();
+		return results.get(0);
 	}
 	
-	private boolean isLoginInvalid(String login) {
-		return login == null || login.isEmpty() || login.isBlank();
-	}
-
-	private boolean notSingleUserFound(List<User> users) {
-		return users == null || users.isEmpty() || users.size() > 1;
-	}
-
 	@Override
 	public void addNewUser(User user) {
 		entityManager.persist(user);
