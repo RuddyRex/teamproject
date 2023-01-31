@@ -15,32 +15,30 @@ import com.ruddyrex.teamproject.RuddyRex.dao.impl.UserDaoImpl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Before;
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applicationContext-test.xml"})
+@ContextConfiguration(locations = { "classpath:applicationContext-test.xml" })
 @Transactional
 @Rollback(true)
 public class UserDaoTest {
-    
+
 	@Autowired
 	UserDao userDao;
-	
+
 	public String testName = "name and surname";
 	public String testNickname = "nickname";
-	public String testPass = "password";	
+	public String testPass = "password";
 	public String testMail = "mail";
 	public String nullString = null;
 	public String emptyString = "";
-	
+
 	@Before
 	public void buildUp() {
 		userDao = new UserDaoImpl();
 	}
-	
+
 	public User setUserData() {
 		User testUser = new User();
 		testUser.setName(testName);
@@ -49,32 +47,31 @@ public class UserDaoTest {
 		testUser.setMail(testMail);
 		return testUser;
 	}
-	
+
 	@Test
 	public void shouldFindUserById() {
 		User user = setUserData();
 		userDao.createUser(user);
-		
+
 		User testUser = userDao.findUserById(1);
-		assertEquals(user,testUser);
+		assertEquals(user, testUser);
 	}
-	
-	/*@Test
+
+	@Test
 	public void shouldFindUserByNickname() {
 		User user = setUserData();
 		userDao.createUser(user);
-		
+
 		User testUser = userDao.findUserByNickname(user.getNickname());
-		assertEquals(user,testUser);
+		assertEquals(user, testUser);
 	}
-	
-	
+
 	@Test
 	public void shouldNotFindUserWithNullNickname() {
 		User user = userDao.findUserByNickname(null);
 		assertNull(user);
 	}
-	
+
 	@Test
 	public void shouldCreateUser() {
 		User user = new User();
@@ -84,11 +81,4 @@ public class UserDaoTest {
 		user.setMail(testMail);
 		assertNotNull(user);
 	}
-	
-	
-	 * @Test public void getUserTrue() { 
-	 * User getUser = getUserData();
-	 * UserDaoImpl.createUser(getUser); 
-	 * }
-	 */
 }
