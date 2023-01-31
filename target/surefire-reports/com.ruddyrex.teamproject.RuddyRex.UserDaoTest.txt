@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.ruddyrex.teamproject.RuddyRex.UserDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.015 s <<< FAILURE! - in com.ruddyrex.teamproject.RuddyRex.UserDaoTest
+com.ruddyrex.teamproject.RuddyRex.UserDaoTest.shouldFindUserById  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pl.wwsis.microblog.dao.UserDao.createUser(pl.wwsis.microblog.model.user)" because "this.userDao" is null
+	at com.ruddyrex.teamproject.RuddyRex.UserDaoTest.shouldFindUserById(UserDaoTest.java:63)
+

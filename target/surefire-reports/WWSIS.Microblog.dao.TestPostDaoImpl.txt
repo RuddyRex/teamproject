@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: WWSIS.Microblog.dao.TestPostDaoImpl
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in WWSIS.Microblog.dao.TestPostDaoImpl
+WWSIS.Microblog.dao.TestPostDaoImpl.test  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Not yet implemented
+	at WWSIS.Microblog.dao.TestPostDaoImpl.test(TestPostDaoImpl.java:11)
+
